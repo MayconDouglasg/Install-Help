@@ -30,6 +30,8 @@ export const TRANSLATIONS = {
     utilities: 'Utilities',
     drivers: 'Drivers',
     communication: 'Communication',
+    productivity: 'Productivity',
+    security: 'Security',
     profileGeneral: 'Home / Office',
     profileGaming: 'Gaming',
     profileDev: 'Programming',
@@ -63,6 +65,8 @@ export const TRANSLATIONS = {
     utilities: 'Utilitários',
     drivers: 'Drivers',
     communication: 'Comunicação',
+    productivity: 'Produtividade',
+    security: 'Segurança',
     profileGeneral: 'Casa / Escritório',
     profileGaming: 'Gamer',
     profileDev: 'Desenvolvedor',
@@ -78,6 +82,75 @@ export const PROFILES: { id: ProfileType; labelKey: string; description: string;
 ];
 
 export const SOFTWARE_CATALOG: SoftwareItem[] = [
+  // Productivity (Office & Notes)
+  {
+    id: 'Microsoft.Office',
+    name: 'Microsoft 365',
+    description: 'Word, Excel, PowerPoint & more.',
+    category: 'Productivity',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/5/5f/Microsoft_Office_logo_%282019%E2%80%93present%29.svg',
+    website: 'https://www.office.com/',
+    downloadUrl: 'https://c2rsetup.officeapps.live.com/c2r/download.aspx?ProductreleaseID=O365HomePremRetail&platform=x64&language=pt-br',
+    popular: true
+  },
+  {
+    id: 'TheDocumentFoundation.LibreOffice',
+    name: 'LibreOffice',
+    description: 'Free and open source office suite.',
+    category: 'Productivity',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/4/42/LibreOffice_7.6_icon.svg',
+    website: 'https://www.libreoffice.org/',
+    downloadUrl: 'https://www.libreoffice.org/download/download-libreoffice/'
+  },
+  {
+    id: 'Notion.Notion',
+    name: 'Notion',
+    description: 'All-in-one workspace for notes & tasks.',
+    category: 'Productivity',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png',
+    website: 'https://www.notion.so/',
+    downloadUrl: 'https://www.notion.so/desktop/windows/download',
+    popular: true
+  },
+  {
+    id: 'Obsidian.Obsidian',
+    name: 'Obsidian',
+    description: 'Private and flexible writing app.',
+    category: 'Productivity',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/1/10/2023_Obsidian_logo.svg',
+    website: 'https://obsidian.md/',
+    downloadUrl: 'https://obsidian.md/download'
+  },
+  {
+    id: 'Adobe.Acrobat.Reader.64-bit',
+    name: 'Adobe Acrobat Reader',
+    description: 'View, sign, and annotate PDFs.',
+    category: 'Productivity',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/3/36/Adobe_Acrobat_DC_Icon.png',
+    website: 'https://get.adobe.com/reader/',
+    downloadUrl: 'https://get.adobe.com/reader/download/'
+  },
+
+  // Security
+  {
+    id: 'Malwarebytes.Malwarebytes',
+    name: 'Malwarebytes',
+    description: 'Advanced malware protection.',
+    category: 'Security',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/5/52/Malwarebytes_Anti-Malware_icon.svg',
+    website: 'https://www.malwarebytes.com/',
+    downloadUrl: 'https://downloads.malwarebytes.com/file/mb4_offline'
+  },
+  {
+    id: 'Bitwarden.Bitwarden',
+    name: 'Bitwarden',
+    description: 'Secure open source password manager.',
+    category: 'Security',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/7/77/Bitwarden_logo_vertical_blue.svg',
+    website: 'https://bitwarden.com/',
+    downloadUrl: 'https://vault.bitwarden.com/download/?app=desktop&platform=windows'
+  },
+
   // Browsers
   { 
     id: 'Google.Chrome', 
@@ -494,6 +567,25 @@ export const SOFTWARE_CATALOG: SoftwareItem[] = [
   
   // Creative
   { 
+    id: 'Adobe.CreativeCloud', 
+    name: 'Adobe Creative Cloud', 
+    description: 'Access to all Adobe apps.', 
+    category: 'Creative', 
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Adobe_Creative_Cloud_Rainbow_icon.svg', 
+    website: 'https://www.adobe.com/creativecloud.html',
+    downloadUrl: 'https://creativecloud.adobe.com/apps/download/creative-cloud'
+  },
+  {
+    id: 'Figma.Figma',
+    name: 'Figma',
+    description: 'Collaborative interface design.',
+    category: 'Creative',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg',
+    website: 'https://www.figma.com/',
+    downloadUrl: 'https://www.figma.com/download/desktop/win',
+    popular: true
+  },
+  { 
     id: 'BlenderFoundation.Blender', 
     name: 'Blender', 
     description: '3D creation suite.', 
@@ -654,7 +746,17 @@ export const SOFTWARE_CATALOG: SoftwareItem[] = [
 ];
 
 export const PROFILE_DEFAULTS: Record<ProfileType, string[]> = {
-  'General': ['Google.Chrome', 'VideoLAN.VLC', 'Spotify.Spotify', '7zip.7zip', 'Microsoft.PowerToys', 'ShareX.ShareX'],
+  'General': [
+    'Google.Chrome', 
+    'VideoLAN.VLC', 
+    'Spotify.Spotify', 
+    '7zip.7zip', 
+    'Microsoft.PowerToys', 
+    'ShareX.ShareX', 
+    'Notion.Notion',
+    'Microsoft.Office',
+    'Adobe.Acrobat.Reader.64-bit'
+  ],
   'Gaming': ['Google.Chrome', 'Valve.Steam', 'Discord.Discord', 'Nvidia.GeForceExperience', 'Opera.OperaGX'],
   'Development': [
     'Google.Chrome', 
@@ -665,7 +767,16 @@ export const PROFILE_DEFAULTS: Record<ProfileType, string[]> = {
     'Microsoft.WindowsTerminal', 
     'Postman.Postman', 
     'Microsoft.PowerToys',
-    'Python.Python.3'
+    'Python.Python.3',
+    'Notion.Notion'
   ],
-  'Creative': ['Google.Chrome', 'BlenderFoundation.Blender', 'OBSProject.OBSStudio', 'GIMP.GIMP', 'HandBrake.HandBrake', 'Inkscape.Inkscape']
+  'Creative': [
+    'Google.Chrome', 
+    'Adobe.CreativeCloud',
+    'Figma.Figma',
+    'BlenderFoundation.Blender', 
+    'OBSProject.OBSStudio', 
+    'HandBrake.HandBrake',
+    'Notion.Notion'
+  ]
 };

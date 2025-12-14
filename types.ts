@@ -1,4 +1,4 @@
-export type Category = 'Browsers' | 'Development' | 'Gaming' | 'Multimedia' | 'Utilities' | 'Drivers' | 'Communication' | 'Creative';
+export type Category = 'Browsers' | 'Development' | 'Gaming' | 'Multimedia' | 'Utilities' | 'Drivers' | 'Communication' | 'Creative' | 'Productivity' | 'Security';
 
 export type ProfileType = 'General' | 'Gaming' | 'Development' | 'Creative';
 

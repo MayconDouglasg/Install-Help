@@ -271,7 +271,7 @@ export default function App() {
                <div className="bg-white dark:bg-dark-card rounded-xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm dark:shadow-none">
                  <h3 className="text-sm uppercase tracking-wider text-slate-500 font-bold mb-3">{t.categories}</h3>
                  <div className="space-y-1">
-                   {['All', 'Browsers', 'Development', 'Gaming', 'Multimedia', 'Creative', 'Utilities', 'Drivers', 'Communication'].map((cat) => (
+                   {['All', 'Productivity', 'Creative', 'Browsers', 'Development', 'Gaming', 'Multimedia', 'Utilities', 'Security', 'Drivers', 'Communication'].map((cat) => (
                      <button
                         key={cat}
                         onClick={() => setActiveCategory(cat as any)}
@@ -289,7 +289,9 @@ export default function App() {
                         cat === 'Creative' ? t.creative :
                         cat === 'Utilities' ? t.utilities :
                         cat === 'Drivers' ? t.drivers :
-                        cat === 'Communication' ? t.communication : cat
+                        cat === 'Communication' ? t.communication : 
+                        cat === 'Productivity' ? (t as any).productivity :
+                        cat === 'Security' ? (t as any).security : cat
                        }
                      </button>
                    ))}
