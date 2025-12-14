@@ -1,0 +1,5 @@
+{
+  "name": "install.H",
+  "description": "An intelligent tool to automate new PC setups. Select your usage profile (Gaming, Dev, etc.), pick your software, and download the installer.",
+  "requestFramePermissions": []
+}
