@@ -349,7 +349,7 @@ export const SOFTWARE_CATALOG: SoftwareItem[] = [
     id: 'Axosoft.GitKraken',
     name: 'GitKraken',
     description: 'Legendary Git GUI client.',
-    category: 'Development',
+    category: 'Development', 
     icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a2/GitKraken_logo_2024.svg',
     website: 'https://www.gitkraken.com/',
     downloadUrl: 'https://release.gitkraken.com/win64/GitKrakenSetup.exe'
@@ -579,11 +579,20 @@ export const SOFTWARE_CATALOG: SoftwareItem[] = [
     id: 'Figma.Figma',
     name: 'Figma',
     description: 'Collaborative interface design.',
-    category: 'Creative',
+    category: 'Creative', 
     icon: 'https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg',
     website: 'https://www.figma.com/',
     downloadUrl: 'https://www.figma.com/download/desktop/win',
     popular: true
+  },
+  {
+    id: 'DominikLevitsky.FontBase',
+    name: 'FontBase',
+    description: 'Beautiful font manager.',
+    category: 'Creative',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/9/93/FontBase_logo.svg',
+    website: 'https://fontba.se/',
+    downloadUrl: 'https://releases.fontba.se/win/FontBase-2.20.2.exe'
   },
   { 
     id: 'BlenderFoundation.Blender', 
@@ -664,6 +673,59 @@ export const SOFTWARE_CATALOG: SoftwareItem[] = [
     website: 'https://www.7-zip.org/',
     downloadUrl: 'https://www.7-zip.org/a/7z2301-x64.exe'
   },
+  {
+    id: 'Microsoft.VCRedist.2015+.x64',
+    name: 'Visual C++ 2015-2022',
+    description: 'Essential runtime for games/apps.',
+    category: 'Utilities',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Visual_Studio_2013_Logo.svg',
+    website: 'https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist',
+    downloadUrl: 'https://aka.ms/vs/17/release/vc_redist.x64.exe',
+    popular: true
+  },
+  {
+    id: 'Microsoft.VCRedist.2010.x64',
+    name: 'Visual C++ 2010',
+    description: 'Redistributable package (x64).',
+    category: 'Utilities',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Visual_Studio_2013_Logo.svg',
+    website: 'https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist',
+    downloadUrl: 'https://download.microsoft.com/download/1/6/5/165255E7-1014-4D0A-B094-B6A430A6BFFC/vcredist_x64.exe'
+  },
+  {
+    id: 'Microsoft.VCRedist.2012.x64',
+    name: 'Visual C++ 2012',
+    description: 'Redistributable package (x64).',
+    category: 'Utilities',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Visual_Studio_2013_Logo.svg',
+    website: 'https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist',
+    downloadUrl: 'https://download.microsoft.com/download/1/6/B/16B06F60-3B20-4FF2-B699-5E9B7962F9AE/VSU_4/vcredist_x64.exe'
+  },
+  {
+    id: 'Microsoft.VCRedist.2013.x64',
+    name: 'Visual C++ 2013',
+    description: 'Redistributable package (x64).',
+    category: 'Utilities',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/f/f9/Visual_Studio_2013_Logo.svg',
+    website: 'https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist',
+    downloadUrl: 'https://aka.ms/highdpimfc2013x64enu'
+  },
+  {
+    id: 'Microsoft.DotNet.DesktopRuntime.8',
+    name: '.NET Desktop Runtime 8',
+    description: 'Run Windows desktop apps.',
+    category: 'Utilities',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg',
+    website: 'https://dotnet.microsoft.com/download/dotnet/8.0'
+  },
+  {
+    id: 'Microsoft.DotNet.DesktopRuntime.6',
+    name: '.NET Desktop Runtime 6',
+    description: 'Run older Windows desktop apps.',
+    category: 'Utilities',
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg',
+    website: 'https://dotnet.microsoft.com/download/dotnet/6.0'
+  },
   { 
     id: 'Microsoft.PowerToys', 
     name: 'PowerToys', 
@@ -711,6 +773,14 @@ export const SOFTWARE_CATALOG: SoftwareItem[] = [
     downloadUrl: 'https://github.com/pbatard/rufus/releases/latest/download/rufus-4.4.exe'
   },
   { 
+    id: 'AMD.ChipsetSoftware', 
+    name: 'AMD Chipset Drivers', 
+    description: 'Essential drivers for AMD Ryzen motherboards.', 
+    category: 'Drivers', 
+    icon: 'https://upload.wikimedia.org/wikipedia/commons/0/0d/AMD_Logo.svg', 
+    website: 'https://www.amd.com/en/support' 
+  },
+  { 
     id: 'Nvidia.GeForceExperience', 
     name: 'GeForce Experience', 
     description: 'Nvidia drivers & tools.', 
@@ -755,9 +825,21 @@ export const PROFILE_DEFAULTS: Record<ProfileType, string[]> = {
     'ShareX.ShareX', 
     'Notion.Notion',
     'Microsoft.Office',
-    'Adobe.Acrobat.Reader.64-bit'
+    'Adobe.Acrobat.Reader.64-bit',
+    'Microsoft.VCRedist.2015+.x64',
+    'Microsoft.DotNet.DesktopRuntime.8'
   ],
-  'Gaming': ['Google.Chrome', 'Valve.Steam', 'Discord.Discord', 'Nvidia.GeForceExperience', 'Opera.OperaGX'],
+  'Gaming': [
+    'Google.Chrome', 
+    'Valve.Steam', 
+    'Discord.Discord', 
+    'Nvidia.GeForceExperience', 
+    'Opera.OperaGX',
+    'Microsoft.VCRedist.2015+.x64',
+    'Microsoft.VCRedist.2013.x64',
+    'Microsoft.VCRedist.2012.x64',
+    'Microsoft.VCRedist.2010.x64'
+  ],
   'Development': [
     'Google.Chrome', 
     'Microsoft.VisualStudioCode', 
@@ -768,12 +850,15 @@ export const PROFILE_DEFAULTS: Record<ProfileType, string[]> = {
     'Postman.Postman', 
     'Microsoft.PowerToys',
     'Python.Python.3',
-    'Notion.Notion'
+    'Notion.Notion',
+    'Microsoft.DotNet.DesktopRuntime.8',
+    'Microsoft.DotNet.DesktopRuntime.6'
   ],
   'Creative': [
     'Google.Chrome', 
     'Adobe.CreativeCloud',
     'Figma.Figma',
+    'DominikLevitsky.FontBase',
     'BlenderFoundation.Blender', 
     'OBSProject.OBSStudio', 
     'HandBrake.HandBrake',
